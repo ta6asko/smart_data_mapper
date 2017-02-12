@@ -1,0 +1,10 @@
+= form_tag import_file_path, method: :get do |f|
+  %ul
+    - SmartDataMapper::FilePresenter.new(@file).headers.each do |header|
+      %li
+        .row
+          .col-lg-6
+            = check_box_tag "headers[]", header
+            = header
+
+  = submit_tag 'Submit', class: 'btn btn-default'

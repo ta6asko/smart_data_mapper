@@ -1,0 +1,10 @@
+%table.table.table-striped
+  %thead
+    %tr
+      - @mapper.headers.each do |header|
+        %th= header
+  %tbody
+    - @mapper.data.each do |line|
+      %tr
+        - line.each do |field|
+          %td= field

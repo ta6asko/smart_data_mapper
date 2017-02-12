@@ -1,0 +1,5 @@
+.col-md-6
+  %h4 attach file
+  = form_for @file, as: :file, url: files_path(@file) do |f|
+    = f.file_field :file, autofocus: true, required: true
+    = f.button :submit
